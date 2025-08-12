@@ -7,3 +7,7 @@ Steps to creating a SQL database in Azure portal
 - Select service tier
     - **DTU** is where compute and storage goes hand in hand, meaning if you scale up compute it also scales up storage. This is not ideal if don't necessarily require more storage as you scale up compute. However it is the cheaper option.
     - **vCore** is more ideal as you can scale storage independitely from the compute.
+
+## Step 2 - Connect to database via VSCode
+- Input server name and authentication type. I will use the credentials setup when creating the database. If I picked a Entra user I would've selected Entra login instead.
+- **IMPORTANT** My connection initially failed as I had to go to the server and add my IP address to the firewall rules. Databases hold sensitive information and cannot be accessed publicly by default.
